@@ -10,18 +10,32 @@ class EmployeeDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(employee.preferredFullName),
+        title: const Text('Employee Details'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Job Title: ${employee.jobTitleName}'),
-            Text('Employee Code: ${employee.employeeCode}'),
-            Text('Region: ${employee.region}'),
-            Text('Phone: ${employee.phoneNumber}'),
-            Text('Email: ${employee.emailAddress}'),
+            Text(
+              'Name: ${employee.name}',
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'Email: ${employee.email}',
+              style: const TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'Phone: ${employee.phoneNumber}',
+              style: const TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'ID: ${employee.id}',
+              style: const TextStyle(fontSize: 18),
+            ),
           ],
         ),
       ),

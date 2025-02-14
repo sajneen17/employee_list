@@ -1,37 +1,22 @@
 class Employee {
-  final String userId;
-  final String jobTitleName;
-  final String firstName;
-  final String lastName;
-  final String preferredFullName;
-  final String employeeCode;
-  final String region;
+  final int id;
+  final String name;
+  final String email;
   final String phoneNumber;
-  final String emailAddress;
 
   Employee({
-    required this.userId,
-    required this.jobTitleName,
-    required this.firstName,
-    required this.lastName,
-    required this.preferredFullName,
-    required this.employeeCode,
-    required this.region,
+    required this.id,
+    required this.name,
+    required this.email,
     required this.phoneNumber,
-    required this.emailAddress,
   });
 
-  factory Employee.fromJson(Map<String, dynamic> json) {
+  factory Employee.fromMap(Map<String, dynamic> map) {
     return Employee(
-      userId: json['userId'],
-      jobTitleName: json['jobTitleName'],
-      firstName: json['firstName'],
-      lastName: json['lastName'],
-      preferredFullName: json['preferredFullName'],
-      employeeCode: json['employeeCode'],
-      region: json['region'],
-      phoneNumber: json['phoneNumber'],
-      emailAddress: json['emailAddress'],
+      id: map['id'],
+      name: map['name'],
+      email: map['email'],
+      phoneNumber: map['phoneNumber'],
     );
   }
 }

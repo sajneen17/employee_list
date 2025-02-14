@@ -1,19 +1,16 @@
-part of 'employee_cubit.dart';
+import 'package:employee_list/employee_model.dart';
+import 'package:flutter/material.dart';
 
-abstract class EmployeeState extends Equatable {
-  const EmployeeState();
 
-  @override
-  List<Object> get props => [];
-}
+@immutable
+abstract class EmployeeState {}
 
 class EmployeeInitial extends EmployeeState {}
 
 class EmployeeLoaded extends EmployeeState {
   final List<Employee> employees;
 
-  const EmployeeLoaded(this.employees);
-
-  @override
-  List<Object> get props => [employees];
+  EmployeeLoaded(this.employees);
 }
+
+class EmployeeError extends EmployeeState {}
