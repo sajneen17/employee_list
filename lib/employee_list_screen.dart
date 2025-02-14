@@ -29,7 +29,6 @@ class EmployeeListScreen extends StatelessWidget {
               ),
             ),
           ),
-          // Employee List
           Expanded(
             child: BlocBuilder<EmployeeCubit, EmployeeState>(
               builder: (context, state) {
